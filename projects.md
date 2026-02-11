@@ -1,7 +1,7 @@
 ---
 layout: page
-title: about
-permalink: /about/
+title: Projects
+permalink: /projects/
 ---
 
 这是一个示例页面。
