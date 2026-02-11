@@ -29,9 +29,12 @@ tracking:
   ga_id: "UA-xxxxxx-yy"
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
 sass:
   sass_dir: _sass

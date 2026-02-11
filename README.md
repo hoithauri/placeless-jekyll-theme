@@ -9,7 +9,7 @@
 
 In default, this jekyll theme **don't** offer:
 
-- syntax highlighting styles（2026-02-12 我尝试给这个主题加入语法高亮，以失败告终，毕竟本人对此一窍不通）
+- ~~syntax highlighting styles（2026-02-12 我尝试给这个主题加入语法高亮，以失败告终，毕竟本人对此一窍不通）~~ 2026-02-12 加入了语法高亮
 - social sharing functionalities
 - comment module
 - etc.
