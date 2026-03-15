@@ -7,13 +7,13 @@
 
 # Site settings
 title: minefield
-email: placeless@outlook.com
+email: "#"
 author: "Mr. Hello"
 logo: "./apple-touch-icon.png"
 lang: "zh-cmn-Hans"
 description: "All animals are equal, but some animals are more equal than others."
-baseurl: "/jekyll-theme-placeless" # the subpath of your site, e.g. /blog , 末尾不带"/".
-url: "https://hoithauri.github.io" # the base hostname & protocol for your site, 末尾不带"/".
+baseurl: "" # the subpath of your site, e.g. /blog , 末尾不带"/".
+url: "https://hzyz1.pages.dev" # the base hostname & protocol for your site, 末尾不带"/".
 timezone: Asia/Shanghai
 encoding: UTF-8
 

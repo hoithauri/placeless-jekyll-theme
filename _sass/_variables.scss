@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+// Fonts
+$base-font-family: 'Source Han Serif SC', 'Source Han Serif CN', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.875;
+$meta-font-size:   $base-font-size * 0.7;
+$base-line-height: 2;
+$h1-h6-weight:     700;
+
+// Spacing
+$spacing-unit:     40px;
+
+// Colors
+$text-color:       #333;
+$background-color-white: #fff;
+$background-color-gray: #f7f7f7;
+$brand-color:      color.adjust($text-color, $lightness: 25%);   // 原 lighten($text-color, 25%)
+
+$grey-color:       #828282;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);  // 原 lighten($grey-color, 40%)
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%); // 原 darken($grey-color, 25%)
+
+// Layout
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+$on-screen:        769px;

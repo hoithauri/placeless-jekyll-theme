@@ -1,3 +1,8 @@
+@use 'variables';
+@use 'mixins';
+@use 'sass:color';
+@use 'sass:math';
+
 /**
  * Site header
  */
@@ -7,7 +12,7 @@
  }
 
 .site-header {
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 1px solid variables.$grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -30,9 +35,9 @@
     letter-spacing: -1px;
 
     .page-link {
-        color: $grey-color;
+        color: variables.$grey-color;
         font-weight: 300;
-        line-height: $base-line-height;
+        line-height: variables.$base-line-height;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -40,11 +45,11 @@
         }
     }
 
-    @include media-query-min($on-screen) {
+    @include mixins.media-query-min(variables.$on-screen) {
         position: absolute;
         top: 5px;
-        right: $spacing-unit / 2;
-        background-color: $background-color-white;
+        right: math.div(variables.$spacing-unit, 2);
+        background-color: variables.$background-color-white;
         text-align: right;
 
         .page-link {
@@ -57,23 +62,22 @@
     }
 }
 
-
 /**
  * Page content
  */
  #article {
-    @include media-query-min($on-screen) {
+    @include mixins.media-query-min(variables.$on-screen) {
         padding-bottom: 4em;
     }
  }
 
 .page-content {
-    padding-top: $spacing-unit;
-    @include media-query-max($on-screen) {
-        background-color: $background-color-white;
+    padding-top: variables.$spacing-unit;
+    @include mixins.media-query-max(variables.$on-screen) {
+        background-color: variables.$background-color-white;
         padding-bottom: 3em;
     }
-    @include media-query-min($on-screen) {
+    @include mixins.media-query-min(variables.$on-screen) {
         .wrapper {
             box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);
             article {
@@ -89,25 +93,25 @@
 
 .home {
   margin-top: -1.5em;
-  h2 { color: lighten($text-color, 10%); }
+  h2 { color: color.adjust(variables.$text-color, $lightness: 10%); }
 }
 
 .post-list {
     list-style-position: inside;
     margin-left: 2em;
-    color: $text-color;
+    color: variables.$text-color;
     a {
-      color: lighten($text-color, 10%);
-      &:hover { border-bottom: solid 1px $grey-color; }
+      color: color.adjust(variables.$text-color, $lightness: 10%);
+      &:hover { border-bottom: solid 1px variables.$grey-color; }
     };
-    @include media-query-max($on-screen) {
+    @include mixins.media-query-max(variables.$on-screen) {
         padding-left: 0;
     }
 }
 
 .post-meta {
-    font-size: $meta-font-size;
-    color: $grey-color;
+    font-size: variables.$meta-font-size;
+    color: variables.$grey-color;
     margin-top: -20px;
     a:not(:first-child) {
         margin-left: 10px;
@@ -118,16 +122,15 @@
     font-size: 16px;
 }
 
-
 /**
  * Posts
  */
-.post-header { margin-bottom: $spacing-unit; }
-.post a:hover { border-bottom: solid 1px $grey-color; }
+.post-header { margin-bottom: variables.$spacing-unit; }
+.post a:hover { border-bottom: solid 1px variables.$grey-color; }
 
 div.highlight {
-    background-color: $background-color-gray;
-    @include media-query-max($on-screen) {
+    background-color: variables.$background-color-gray;
+    @include mixins.media-query-max(variables.$on-screen) {
         width: 100vw;
         position: relative;
         left: 50%;
@@ -135,15 +138,14 @@ div.highlight {
         margin-left: -50vw;
         margin-right: -50vw;
     }
-    @include media-query-min($on-screen) {
+    @include mixins.media-query-min(variables.$on-screen) {
         margin: 0 -50px;
         > pre {
             padding: 20px 50px;
-
         }
     }
 }
 
 summary + .highlight {
-    margin-top: $spacing-unit / 1.5;
+    margin-top: math.div(variables.$spacing-unit, 1.5);
 }
